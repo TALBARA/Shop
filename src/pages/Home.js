@@ -14,6 +14,13 @@ function Home(){
                 <h3>Sign Up</h3>
                 <h3>Login</h3>
             </div>
+            <div className="homeForm">
+                <form>
+                    <input type="" />
+                    <input type="" />
+                    <input type="" />
+                </form>
+            </div>
         </div>
     );
 }

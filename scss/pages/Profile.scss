@@ -1,12 +1,7 @@
 .profile{
     text-align: center;
     display: block;
-
-}
-
-.profile_user{
-    width: 80%;
-    display: inline-block;
+    background-color: rgb(18, 18, 36);
 }
 
 .user-img, .user-data{
@@ -15,14 +10,21 @@
 
 .user-img{
     font-size: 18rem;
-    border: solid rgb(18, 18, 36) 4px;
+    border: solid white 4px;
     padding: 1rem;
     border-radius: 15%;
+    text-align: left;
+    background-color: rgb(18, 18, 36);
     //Estamos centrando el contenedor y no el icono
+}
+
+#user-imgIcon{
+    color: white;
 }
 
 .user-data{
     text-align: left;
+    color: white;
 }
 
 .user-data h1{
@@ -37,18 +39,44 @@
 }
 
 .help-icons:hover{
-    background-color: rgb(18, 18, 36);
+    background-color:white;
     color: white;
     border-radius: 15%;
 }
 
 .profile_user, .profile_help{
-    margin-top: 5rem;
+    margin-top: 2rem;
+    width: 80%;
+    display: inline-block;
 }
 
 .profile_help{
-    border: solid rgb(18, 18, 36) 4px;
-    padding: 1rem;
-    border-radius: 15px;
     display: inline-block;
 }
+
+.profile_help ul{
+     border: solid white 4px;
+     border-radius: 15px;
+}
+
+.profile_help li{
+    display: inline-block;
+    margin-left: 5rem;
+    vertical-align: middle;
+    color: white;
+}
+
+.profile_helpBox{
+    width: 100%;
+    border: solid black 4px;
+    background-color: white;
+    border-radius: 15px;
+    height: 20rem;
+    margin-top: 1rem;
+}
+
+.profile_helpItem:hover{
+    
+}
+
+//Se necesita centrar los iconos de la navegacion de datos de usuario

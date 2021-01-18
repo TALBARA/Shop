@@ -112,23 +112,26 @@ span {
 
 .profile {
   text-align: center;
-  display: block; }
-
-.profile_user {
-  width: 80%;
-  display: inline-block; }
+  display: block;
+  background-color: #121224; }
 
 .user-img, .user-data {
   display: inline-block; }
 
 .user-img {
   font-size: 18rem;
-  border: solid #121224 4px;
+  border: solid white 4px;
   padding: 1rem;
-  border-radius: 15%; }
+  border-radius: 15%;
+  text-align: left;
+  background-color: #121224; }
+
+#user-imgIcon {
+  color: white; }
 
 .user-data {
-  text-align: left; }
+  text-align: left;
+  color: white; }
 
 .user-data h1 {
   padding: 1rem;
@@ -140,18 +143,35 @@ span {
   padding: 2rem; }
 
 .help-icons:hover {
-  background-color: #121224;
+  background-color: white;
   color: white;
   border-radius: 15%; }
 
 .profile_user, .profile_help {
-  margin-top: 5rem; }
+  margin-top: 2rem;
+  width: 80%;
+  display: inline-block; }
 
 .profile_help {
-  border: solid #121224 4px;
-  padding: 1rem;
-  border-radius: 15px;
   display: inline-block; }
+
+.profile_help ul {
+  border: solid white 4px;
+  border-radius: 15px; }
+
+.profile_help li {
+  display: inline-block;
+  margin-left: 5rem;
+  vertical-align: middle;
+  color: white; }
+
+.profile_helpBox {
+  width: 100%;
+  border: solid black 4px;
+  background-color: white;
+  border-radius: 15px;
+  height: 20rem;
+  margin-top: 1rem; }
 
 .home {
   width: 100%;
@@ -199,6 +219,9 @@ h3:hover {
 
 .explication i {
   margin-left: 1rem; }
+
+.homeForm {
+  border: solid white 1px; }
 
 .products {
   width: 100%;
@@ -279,3 +302,6 @@ h3:hover {
 
 #youtube:hover, #pinterest:hover {
   color: red; }
+
+.reportsContainer p {
+  width: 90%; }
