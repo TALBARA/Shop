@@ -34,3 +34,27 @@
 
 .supportItems {
   margin-top: 10rem; }
+
+.supportDetails {
+  width: 100%; }
+
+.detailsContainer {
+  border: solid #060b26 3px;
+  border-radius: 5px;
+  margin: 3.5rem; }
+
+.detailsIcon, .detailsContainer h1 {
+  padding: 3rem;
+  display: inline-block;
+  border: solid black 1px; }
+
+.detailsIcon {
+  background-color: #060b26;
+  text-align: center; }
+
+.detailsIcon .supportIcon, .detailsIcon p {
+  color: white;
+  text-align: center; }
+
+.detailsIcon p {
+  font-size: 2rem; }

@@ -5,6 +5,7 @@ import * as GoIcons from 'react-icons/go';
 
 function Support(){
     return(
+        <>
         <div className="support">
             <div className="supportContainer">
                 <h1>What is the problem?</h1>
@@ -38,6 +39,16 @@ function Support(){
                 </div>
             </div>
         </div>
+        <div className="supportDetails">
+            <div className="detailsContainer">
+                <div className="detailsIcon">
+                    <FaIcons.FaTruck className="supportIcon"/>
+                    <p>Problems with <br/> delivery</p>
+                </div>
+                <h1>Ejemplo de seleccion</h1>
+            </div>
+        </div>
+        </>
     );
 }
 
