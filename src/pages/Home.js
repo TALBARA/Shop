@@ -34,7 +34,7 @@ function Home(){
             </div>
         </div>
         <div className="formHome">
-            {logIn ?
+            {singUp ?
             <form>
                 <div className="inputForm">
                     <label>Nombre de Usuario</label>
@@ -57,7 +57,7 @@ function Home(){
                 </div>
             </form>
             : ""}
-            {singUp ?
+            {logIn ?
             <form>
                 <div className="inputForm">
                     <label>Nombre de Usuario</label>
@@ -69,7 +69,7 @@ function Home(){
                 </div>
                 
                 <div className="buttonForm">
-                        <button>Registrarse</button>
+                        <button>Iniciar Sesion</button>
                 </div> 
             </form>
             : ""}

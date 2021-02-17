@@ -74,23 +74,36 @@
 span {
   margin-left: 16px; }
 
-.supportContainer {
+.support {
   width: 100%;
-  border: solid black 1px;
-  text-align: center;
   background-color: #060b26; }
+
+.metaContainer {
+  display: flex;
+  flex-direction: column;
+  border: solid green;
+  height: 100%;
+  align-items: center; }
+
+.supportContainer {
+  border: solid red; }
+
+.supportItems ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center; }
 
 .supportContainer li {
   border: solid white 3px;
-  display: inline-block;
   padding: 1rem;
-  margin: 1rem;
   border-radius: 15px;
   color: white;
   background-color: #060b26;
   height: 24rem;
   width: 17rem;
-  vertical-align: middle; }
+  list-style: none; }
 
 .supportContainer li:hover {
   transform: translateY(-3rem); }
@@ -101,15 +114,10 @@ span {
 
 .supportContainer h1 {
   color: white;
-  font-size: 9rem;
-  margin-top: 4rem; }
+  font-size: 9rem; }
 
 .supportIcon {
-  font-size: 8rem;
-  margin-top: 1rem; }
-
-.supportItems {
-  margin-top: 10rem; }
+  font-size: 8rem; }
 
 .supportDetails {
   width: 100%; }
@@ -360,22 +368,97 @@ h3:hover {
 #products {
   display: none; }
 
-.teamContainer {
-  width: 100%;
-  border: solid black 1px; }
-
-.teamIconsContainer {
-  color: #04044b;
-  padding: 1rem; }
-
-#twitter:hover, #facebook:hover {
-  color: blue; }
-
-#instagram:hover {
-  color: brown; }
-
-#youtube:hover, #pinterest:hover {
-  color: red; }
-
 .reportsContainer p {
   width: 90%; }
+
+.reports {
+  padding: 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #060b26; }
+
+.reportContainer {
+  width: 18rem;
+  height: 60%;
+  background-color: white;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0 0.5rem; }
+
+.reportContainer h1 {
+  font-size: 2rem;
+  color: #060b26;
+  text-align: center; }
+
+.reportContainer li {
+  list-style: none;
+  font-size: 5rem; }
+
+.reportContainer p {
+  font-size: 1.5rem;
+  color: #060b26;
+  text-align: center; }
+
+.messages {
+  background-color: #060b26;
+  color: white;
+  border: solid white;
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
+
+.messagesInputs {
+  width: 20%;
+  height: 60%;
+  display: flex; }
+
+.chatContainer {
+  width: 100%;
+  height: 50%; }
+
+.messagesInputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly; }
+
+.messagesInputs input {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  border-radius: 5px; }
+
+.chat {
+  color: black;
+  width: 100%;
+  display: flex;
+  height: 100%; }
+
+.chat ul {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: white; }
+
+.chat ul li {
+  list-style: none;
+  padding: 0.5rem;
+  font-size: 1.5rem; }
+
+.chatButtons {
+  display: flex;
+  flex-direction: row;
+  height: 3rem; }
+
+.chatButtons input:first-child {
+  width: 100%;
+  padding: 1rem; }
+
+.chatButtons button {
+  width: 25%;
+  border: none;
+  border: solid black 1px;
+  outline: none; }

@@ -1,21 +1,39 @@
-.supportContainer{
+.support{
     width: 100%;
-    border: solid black 1px;
-    text-align: center;
     background-color: #060b26;
 }
 
+.metaContainer{
+    display: flex;
+    flex-direction: column;
+    border: solid green;
+    height: 100%;
+    align-items: center;
+}
+
+.supportContainer{
+    border: solid red;
+  
+}
+
+.supportItems ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
 .supportContainer li{
+    
     border: solid white 3px;
-    display: inline-block;
     padding: 1rem;
-    margin: 1rem;
     border-radius: 15px;
     color: white;
     background-color: #060b26;
     height: 24rem;
     width: 17rem;
-    vertical-align: middle;
+    list-style: none;
 }
 
 .supportContainer li:hover{
@@ -30,16 +48,11 @@
 .supportContainer h1{
     color: white;
     font-size: 9rem;
-    margin-top: 4rem;
 }
 
 .supportIcon{
     font-size: 8rem;
-    margin-top: 1rem;
-}
 
-.supportItems{
-    margin-top: 10rem;
 }
 
 .supportDetails{
