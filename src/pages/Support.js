@@ -1,57 +1,60 @@
 import React from 'react';
-import * as FaIcons from 'react-icons/fa';
-import * as IoIcons from 'react-icons/io5';
-import * as GoIcons from 'react-icons/go';
+//import { FaCommentsDollar } from 'react-icons/fa';
+import { AiOutlineClose } from 'react-icons/ai';
+import { SupportData } from '../components/SupportData';
 
 function Support(){
+
+    const [title, changeTitle] = React.useState(true);
+    const [index, setIndex] = React.useState();
+    const [display, setDisplay] = React.useState(false);
+
+    const handleTitle = (e) => {
+       changeTitle(false);
+       setIndex(e);
+       setDisplay(true);
+    }
+
+    const handleOcult = () =>{
+        changeTitle(true);
+        setDisplay(false);
+    }
+
     return(
         <>
-        <div className="support">
-           <div className="metaContainer">
-            <div className="supportContainer">
-                    <h1>What is the problem?</h1>
-                    <div className="supportItems">
-                        <ul>
-                            <li>
-                                <FaIcons.FaTruck className="supportIcon"/>
-                                <p>Problems with <br/> delivery</p>
-                            </li>
-                            <li>
-                                <IoIcons.IoAlarmSharp className="supportIcon"/>
-                                <p>Im not on time</p>
-                            </li>
-                            <li>
-                                <GoIcons.GoPerson className="supportIcon"/>
-                                <p>Problems with <br/>the seller</p>
-                            </li>
-                            <li>
-                                <FaIcons.FaBox className="supportIcon"/>
-                                <p>Problems with <br/>your purchase </p>
-                            </li>
-                            <li>
-                                <FaIcons.FaPaypal className="supportIcon"/>
-                                <p>Payment method <br/>problems</p>
-                            </li>
-                            <li>
-                                <IoIcons.IoChatboxEllipses className="supportIcon"/>
-                                <p>Other problems</p>
-                            </li>
+            <div className="support" >
+                <div className="supportContainer">
+                        { title ? <h1>What is the problem ?</h1> : ''}
+                        <div className="supportItems">
+                        <ul> 
+                            {SupportData.map((i,item) => (
+                                <li key={item} onClick={() => handleTitle(item)}>
+                                    <i className={i.cName}>{i.icon}</i>
+                                    <p>{i.title}</p>
+                                </li>
+                            ))}
                         </ul>
                     </div>
                 
-            </div>
-            </div>
-        </div>
-        <div className="supportDetails">
-            <div className="detailsContainer">
-                <div className="detailsIcon">
-                    <FaIcons.FaTruck className="supportIcon"/>
-                    <p>Problems with <br/> delivery</p>
-                    <p>Esta parte esta en proceso, tengo que cargar los datos de un fichero externo y con estados mostrar la informacion segun pinches en los iconos, decirle a Javier que mañana 17/02 esta parte esta terminada</p>
+                { display ? 
+                    <div className="supportDescription">
+                        <div className="descriptionContainer">
+                            <div className="containerIcon">
+                                <i>{SupportData[index].icon}</i>
+                            </div>
+                            <div className="supportHelp">
+                                <div className="titleAndClose">
+                                    <h2>{SupportData[index].title}</h2>
+                                    <i><AiOutlineClose onClick={handleOcult}/></i>
+                                </div>
+                                <p>{SupportData[index].description}</p>
+                            </div>
+                        </div>
+                    </div> 
+                : ''
+                }
                 </div>
-                <h1>Ejemplo de seleccion</h1>
             </div>
-        </div>
         </>
     );
 }
