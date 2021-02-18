@@ -1,79 +1,59 @@
 import React from 'react';
+import HomeSignUp from '../components/HomeSignUp';
+import HomeLogIn from '../components/HomeLogIn';
 import * as FaIcons from 'react-icons/fa';
 
 function Home(){
 
     const [logIn,setLogin] = React.useState(false);
     const [singUp,setSingUp] = React.useState(false);
+    const [title, setTitle] = React.useState(true);
 
     const selectLogin = () => {
         setLogin(true);
         setSingUp(false);
+        setTitle(false);
     }
     
-    const selectSingUp = () => {
+    const selectSignUp = () => {
         setSingUp(true);
         setLogin(false);
+        setTitle(false);
+    }
+
+    const close =  () =>{
+        setSingUp(false);
+        setLogin(false);
+        setTitle(true);
     }
 
     return(
         <>
         <div className="home">
-            <div className="explication">
-                <div className="title">
-                    <h1>White Point</h1> 
-                    <i><FaIcons.FaGlobeEurope /></i>
-                </div>
-                <div className="slogan">
-                    <p>The best point of view you can find</p>
-                </div>
-            </div>
             <div className="homeContainer">
-                <h3 onClick={selectSingUp}>Sign Up</h3>
-                <h3 onClick={selectLogin}>Login</h3>
+                {title ? <div className="explication">
+                    <div>
+                        <div className="title"> 
+                            <h1>White Point</h1> 
+                            <i><FaIcons.FaGlobeEurope /></i>
+                        </div>
+                        <div className="slogan">
+                            <p>The best point of view you can find</p>
+                        </div>
+                    </div>
+                   <div className="homeButtons">
+                        <h3 onClick={selectSignUp}>Sign Up</h3>
+                        <h3 onClick={selectLogin}>Login</h3>
+                   </div>
+                   </div> : 
+                    <div className="formHome">
+                        {singUp ? <HomeSignUp alt={selectLogin} close={close}/> : ""}
+                        {logIn ? <HomeLogIn alt={selectSignUp} close={close}/> : ""}
+                    </div>
+                }
             </div>
         </div>
-        <div className="formHome">
-            {singUp ?
-            <form>
-                <div className="inputForm">
-                    <label>Nombre de Usuario</label>
-                    <input type="text" />
-                </div>
-                <div className="inputForm">
-                    <label>Correo electronico</label>
-                    <input type="text" />
-                </div>
-                <div className="inputForm">
-                    <label>Nueva contraseña</label>
-                    <input type="text" />
-                </div>
-                <div className="inputForm">
-                    <label>Repetir contraseña</label>
-                    <input type="text" />
-                </div>
-                <div className="buttonForm">
-                    <button>Registrarse</button>
-                </div>
-            </form>
-            : ""}
-            {logIn ?
-            <form>
-                <div className="inputForm">
-                    <label>Nombre de Usuario</label>
-                    <input type="text" />
-                </div>
-                <div className="inputForm">
-                    <label>Contraseña de Usuario</label>
-                    <input type="text" />
-                </div>
-                
-                <div className="buttonForm">
-                        <button>Iniciar Sesion</button>
-                </div> 
-            </form>
-            : ""}
-        </div>
+       
         </>
     );
 }

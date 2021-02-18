@@ -1,9 +1,9 @@
 .home{
     display: flex;
-    justify-content: center;
     flex-direction: column;
     align-items: center;
     background-color: #060b26;
+    justify-content: center;
 }
 
 .explication{
@@ -11,6 +11,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 100%;
+    justify-content: space-around;
 }
 
 .title{
@@ -25,9 +27,19 @@
     letter-spacing: 1rem;
 }
 
-.homeContainer {
-    margin-top: 10rem;
+.homeButtons{
     display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.homeContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 60%;
+    width: 100%;
 }
 
 .explication h1{
@@ -37,24 +49,24 @@
 .explication i{
     display: flex;
     align-items: flex-end;
-    height: 84%;
+    padding-bottom: 3rem;
 }
 
-.homeContainer h3{
-    margin: 1rem;
+.homeButtons h3{
+    margin-left: 3rem;
 }
 
-.homeContainer h3:first-child{
+.homeButtons h3:first-child{
     background-color:white;
     color: #060b26;
 }
 
-.homeContainer h3:last-child{
+.homeButtons h3:last-child{
     border: solid white 2px;
     color: white;
 }
 
-.homeContainer h3{
+.homeButtons h3{
     padding: 1rem;
     border-radius: 15px;
 }
@@ -66,7 +78,7 @@ h3:hover{
 .formHome{
     display: flex;
     justify-content: center;
-    margin-top: 2rem;
+    width: 100%;
 }
 
 .formHome form{
@@ -78,6 +90,14 @@ h3:hover{
     margin: 1rem;
     padding: 1rem;
     background-color: #060b26;
+    border: solid white;
+}
+
+#formSignUp{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    height: 100%;
 }
 
 .inputForm input{
@@ -92,6 +112,7 @@ h3:hover{
 
 .inputForm label{
     color: white;
+    font-size: 1rem;
 }
 
 .inputForm label,.inputForm input{
@@ -116,4 +137,14 @@ h3:hover{
     margin-top: 1rem;
 }
 
+.buttonForm button:last-child{
+    background-color: rgb(97, 45, 218);
+}
+
+.formClose{
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 1rem;
+}
 
