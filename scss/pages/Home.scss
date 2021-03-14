@@ -148,3 +148,62 @@ h3:hover{
     font-size: 1rem;
 }
 
+@media (max-width: 1400px){
+    .title h1{
+        display: none;
+    }
+
+    .slogan{
+        display: none;
+    }
+
+    .title i{
+        font-size: 20rem;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+    .formHome form{
+        width: 60%;
+    }
+
+}
+
+@media (max-width: 530px){
+    .title h1{
+        display: none;
+    }
+
+    .slogan{
+        display: none;
+    }
+
+    .title i{
+        font-size: 20rem;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .homeButtons{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        h3{
+            margin-left: 0;
+            text-align: center;
+            margin: 1rem;
+        }
+    }
+
+    .formHome form{
+        width: 100%;
+    }
+}
+
+@media (max-width: 1100px){
+   
+    .formHome form{
+        width: 80%;
+    }
+}

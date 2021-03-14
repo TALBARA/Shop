@@ -1,32 +1,58 @@
-import React from 'react';
-import * as FaIcons from "react-icons/fa";
-import * as BiIcons from "react-icons/bi";
-import * as RiIcons from "react-icons/ri";
-import * as AiIcons from "react-icons/ai";
+import React, { useState, useEffect } from 'react';
+import { AiOutlinePlusCircle } from 'react-icons/ai';
+import { FaCartArrowDown } from 'react-icons/fa';
+import { FaCartPlus } from 'react-icons/fa';
 
-function Profile(){
+const Profile = () => {
+
+    const [cart, setCart] = useState(false);
+    const [button, setButton] = useState(true);
+
+    const handleClickCart = () =>{
+        setCart(!cart);
+    }
+
+    const handleButton = () =>{ 
+        setButton(!button);
+    }
+
     return(
-        <div className="profile">
-            <div className="profile_user">
-                <div className="user-img">
-                    <FaIcons.FaUserCircle id="user-imgIcon"/>
-                </div>
-                <div className="user-data">
-                    <h1>Nombre</h1>
-                    <h1>Datos</h1>
+       <div className="section">
+          <div className="section-user">
+            <div className="data-user">
+                    <div className="icon">
+                        <i><AiOutlinePlusCircle /></i>
+                    </div>
+            </div>
+            <div className="description-user">
+                    <ul>
+                        <li>Tus metodos de pago</li>
+                        <li>Tus compras mas recientes</li>
+                        <li>Datos Personales</li>
+                        <li>Direccion de correo</li>
+                        <li>Telefono</li>
+                    </ul>
+            </div>
+            <div className="cart">
+                    <div className="cart-items">
+                        <h1>Aqui es donde va el contenido del carrito</h1>
+                    </div>
+                    <i onClick={handleClickCart}>{ cart ? <FaCartArrowDown /> : <FaCartPlus /> }</i>
+            </div>
+            <div className="cart-sugerence">
+                <p>Estas son las marcas que pensamos que te pueden gustar</p>
+                <div className="sugerence-data">
+                    <ul>
+                        <li><p>Marca 1</p><button onClick={handleButton} className={button ? "addCart" : "inCart"}>{ button ? 'Añadir' : 'Añadido' }</button><button className="deleteCart">Eliminar</button></li>
+                        <li><p>Marca 2</p><button onClick={handleButton} className={button ? "addCart" : "inCart"}>{ button ? 'Añadir' : 'Añadido' }</button><button className="deleteCart">Eliminar</button></li>
+                        <li><p>Marca 3</p><button onClick={handleButton} className={button ? "addCart" : "inCart"}>{ button ? 'Añadir' : 'Añadido' }</button><button className="deleteCart">Eliminar</button></li>
+                        <li><p>Marca 4</p><button onClick={handleButton} className={button ? "addCart" : "inCart"}>{ button ? 'Añadir' : 'Añadido' }</button><button className="deleteCart">Eliminar</button></li>
+                        <li><p>Marca 5</p><button onClick={handleButton} className={button ? "addCart" : "inCart"}>{ button ? 'Añadir' : 'Añadido' }</button><button className="deleteCart">Eliminar</button></li>
+                        <li><p>Marca 6</p><button onClick={handleButton} className={button ? "addCart" : "inCart"}>{ button ? 'Añadir' : 'Añadido' }</button><button className="deleteCart">Eliminar</button></li>
+                    </ul>
                 </div>
             </div>
-            <div className="profile_help"> 
-                <ul>
-                    <li><FaIcons.FaCartArrowDown  className="profile_helpItem"/></li>
-                    <li><BiIcons.BiSupport className="profile_helpItem"/></li>
-                    <li><RiIcons.RiFilePaperLine className="profile_helpItem"/></li>
-                    <li><AiIcons.AiFillInfoCircle className="profile_helpItem"/></li>
-                </ul>
-                <div className="profile_helpBox">
-                    Esto se oculta
-                </div>
-            </div>
+           </div>
         </div>
     );
 }

@@ -9,9 +9,9 @@ export const SupportData = [
         icon :  <FaIcons.FaTruck />,
         cName : 'supportIcon',
         description : <ul>
-                        <li>Hello world</li>
-                        <li>Hello world</li>
-                        <li>Hello world</li>
+                        <li>Check if you have entered the numbers correctly</li>
+                        <li>¿Where is my code?</li>
+                        <li>Other</li>
                       </ul>
     },
     {
@@ -19,9 +19,9 @@ export const SupportData = [
         icon :  <IoIcons.IoAlarmSharp />,
         cName : 'supportIcon',
         description : <ul>
-                        <li>Hello world</li>
-                        <li>Hello world</li>
-                        <li>Hello world</li>
+                        <li>You have entered the address correctly ?</li>
+                        <li>Check shipping code</li>
+                        <li>Other</li>
                       </ul>
     },
     {
@@ -29,9 +29,9 @@ export const SupportData = [
         icon :  <GoIcons.GoPerson />,
         cName : 'supportIcon',
         description : <ul>
-                        <li>Hello world</li>
-                        <li>Hello world</li>
-                        <li>Hello world</li>
+                        <li>Not what you expected</li>
+                        <li>Purchase by mistake</li>
+                        <li>Other</li>
                       </ul>
     },
     {
@@ -39,9 +39,9 @@ export const SupportData = [
         icon :  <FaIcons.FaBox />,
         cName : 'supportIcon',
         description : <ul>
-                        <li>Hello world</li>
-                        <li>Hello world</li>
-                        <li>Hello world</li>
+                        <li>Arrived in poor condition ?</li>
+                        <li>Used or the defectuous ? </li>
+                        <li>Other</li>
                       </ul>
     },
     {
@@ -49,9 +49,9 @@ export const SupportData = [
         icon :  <FaIcons.FaPaypal />,
         cName : 'supportIcon',
         description : <ul>
-                        <li>Hello world</li>
-                        <li>Hello world</li>
-                        <li>Hello world</li>
+                        <li>Problems with payment</li>
+                        <li>Other payment methods </li>
+                        <li>Other</li>
                       </ul>
     },
     {
@@ -59,9 +59,9 @@ export const SupportData = [
         icon :  <IoIcons.IoChatboxEllipses />,
         cName : 'supportIcon',
         description : <ul>
-                        <li>Hello world</li>
-                        <li>Hello world</li>
-                        <li>Hello world</li>
+                        <li>You are not happy with the service </li>
+                        <li>Error when making a purchase</li>
+                        <li>Account error ? </li>
                       </ul>
     },
 ]

@@ -107,7 +107,6 @@
 .supportHelp ul {
   display: flex;
   flex-direction: row;
-  border: solid red;
   flex: 1; }
 
 .supportHelp li {
@@ -129,3 +128,55 @@
 
 .titleAndClose h2 {
   width: 100%; }
+
+@media (max-width: 1630px) {
+  .supportItems {
+    height: auto; }
+    .supportItems i {
+      padding: 5rem; }
+    .supportItems p {
+      display: none; }
+  .descriptionContainer {
+    height: auto; } }
+
+@media (max-width: 1050px) {
+  .supportContainer {
+    height: auto; }
+    .supportContainer h1 {
+      font-size: 5rem; }
+    .supportContainer ul {
+      flex-direction: column; }
+      .supportContainer ul li:hover {
+        transform: none; }
+      .supportContainer ul li {
+        width: 100%; }
+        .supportContainer ul li i {
+          padding: 1rem; }
+        .supportContainer ul li p {
+          display: block; }
+  .descriptionContainer {
+    width: 100%;
+    height: auto; } }
+
+@media (max-width: 670px) {
+  .supportContainer {
+    height: auto; }
+    .supportContainer h1 {
+      font-size: 5rem; }
+    .supportContainer ul {
+      flex-direction: column; }
+      .supportContainer ul li:hover {
+        transform: none; }
+      .supportContainer ul li {
+        width: 100%; }
+        .supportContainer ul li i {
+          padding: 1rem; }
+        .supportContainer ul li p {
+          display: block; }
+  .descriptionContainer {
+    width: 100%;
+    height: auto;
+    flex-direction: column; }
+    .descriptionContainer .titleAndClose {
+      font-size: 2rem;
+      text-align: center; } }

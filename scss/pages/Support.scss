@@ -125,7 +125,6 @@
 .supportHelp ul{
     display: flex;
     flex-direction: row;
-    border: solid red;
     flex: 1;
 }
 
@@ -152,4 +151,89 @@
 
 .titleAndClose h2{
     width: 100%;
+}
+
+@media (max-width: 1630px){
+    .supportItems{
+        height: auto;
+        i{
+            padding: 5rem;
+        }
+        p{
+            display: none;
+        }
+    }
+
+    .descriptionContainer{
+        height: auto;
+    }
+}
+
+@media (max-width: 1050px){
+    .supportContainer{
+        height: auto;
+
+        h1{
+            font-size: 5rem;
+        }
+        ul{
+            flex-direction: column;
+            li:hover{
+                transform: none;
+            }
+            li{
+                width: 100%;
+                i{
+                    padding: 1rem;
+                }
+                p{
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .descriptionContainer{
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 670px){
+    .supportContainer{
+        height: auto;
+
+        h1{
+            font-size: 5rem;
+        }
+        ul{
+            flex-direction: column;
+            li:hover{
+                transform: none;
+            }
+            li{
+                width: 100%;
+                i{
+                    padding: 1rem;
+                }
+                p{
+                    display: block;
+                }
+            }
+        }
+    }
+
+    
+
+    .descriptionContainer{
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+
+        .titleAndClose{
+            font-size: 2rem;
+            text-align: center;
+        }
+
+    }
 }

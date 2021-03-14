@@ -182,7 +182,6 @@ span {
 .supportHelp ul {
   display: flex;
   flex-direction: row;
-  border: solid red;
   flex: 1; }
 
 .supportHelp li {
@@ -205,68 +204,158 @@ span {
 .titleAndClose h2 {
   width: 100%; }
 
-.profile {
-  text-align: center;
-  display: block;
-  background-color: #121224; }
+@media (max-width: 1630px) {
+  .supportItems {
+    height: auto; }
+    .supportItems i {
+      padding: 5rem; }
+    .supportItems p {
+      display: none; }
+  .descriptionContainer {
+    height: auto; } }
 
-.user-img, .user-data {
-  display: inline-block; }
+@media (max-width: 1050px) {
+  .supportContainer {
+    height: auto; }
+    .supportContainer h1 {
+      font-size: 5rem; }
+    .supportContainer ul {
+      flex-direction: column; }
+      .supportContainer ul li:hover {
+        transform: none; }
+      .supportContainer ul li {
+        width: 100%; }
+        .supportContainer ul li i {
+          padding: 1rem; }
+        .supportContainer ul li p {
+          display: block; }
+  .descriptionContainer {
+    width: 100%;
+    height: auto; } }
 
-.user-img {
-  font-size: 18rem;
-  border: solid white 4px;
-  padding: 1rem;
-  border-radius: 15%;
-  text-align: left;
-  background-color: #121224; }
+@media (max-width: 670px) {
+  .supportContainer {
+    height: auto; }
+    .supportContainer h1 {
+      font-size: 5rem; }
+    .supportContainer ul {
+      flex-direction: column; }
+      .supportContainer ul li:hover {
+        transform: none; }
+      .supportContainer ul li {
+        width: 100%; }
+        .supportContainer ul li i {
+          padding: 1rem; }
+        .supportContainer ul li p {
+          display: block; }
+  .descriptionContainer {
+    width: 100%;
+    height: auto;
+    flex-direction: column; }
+    .descriptionContainer .titleAndClose {
+      font-size: 2rem;
+      text-align: center; } }
 
-#user-imgIcon {
-  color: white; }
+.section {
+  display: flex;
+  justify-content: center; }
 
-.user-data {
-  text-align: left;
-  color: white; }
-
-.user-data h1 {
-  padding: 1rem;
-  margin: 1rem; }
-
-.help-icons {
-  display: inline-block;
-  font-size: 5rem;
-  padding: 2rem; }
-
-.help-icons:hover {
-  background-color: white;
-  color: white;
-  border-radius: 15%; }
-
-.profile_user, .profile_help {
-  margin-top: 2rem;
+.section-user {
   width: 80%;
-  display: inline-block; }
+  margin-top: 5rem;
+  border: solid black;
+  border-radius: 5px;
+  background-color: #060b26; }
 
-.profile_help {
-  display: inline-block; }
+.data-user {
+  display: flex; }
+  .data-user .icon {
+    font-size: 10rem;
+    justify-content: center;
+    width: 100%;
+    display: flex;
+    color: white;
+    padding: 1rem; }
+    .data-user .icon i {
+      display: flex; }
 
-.profile_help ul {
-  border: solid white 4px;
-  border-radius: 15px; }
+.description-user {
+  display: flex;
+  justify-content: center;
+  padding: 1rem; }
+  .description-user ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    list-style-type: none;
+    color: white; }
+    .description-user ul li:hover {
+      border-bottom: solid white;
+      transition: linear ease-in-out  1s; }
 
-.profile_help li {
-  display: inline-block;
-  margin-left: 5rem;
-  vertical-align: middle;
-  color: white; }
+.cart {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1rem; }
+  .cart .cart-items {
+    color: white;
+    display: flex;
+    justify-content: center; }
+  .cart i {
+    font-size: 5rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 1rem; }
 
-.profile_helpBox {
-  width: 100%;
-  border: solid black 4px;
-  background-color: white;
-  border-radius: 15px;
-  height: 20rem;
-  margin-top: 1rem; }
+.cart-sugerence {
+  display: flex;
+  flex-direction: column; }
+  .cart-sugerence p {
+    text-align: center;
+    color: white; }
+  .cart-sugerence .sugerence-data {
+    display: flex;
+    justify-content: center;
+    background-color: #060b26; }
+    .cart-sugerence .sugerence-data ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      width: 100%;
+      list-style: none;
+      padding: 1rem; }
+      .cart-sugerence .sugerence-data ul li {
+        padding: 1rem;
+        border: solid black;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        background-color: white; }
+        .cart-sugerence .sugerence-data ul li p {
+          color: black; }
+        .cart-sugerence .sugerence-data ul li button {
+          width: 50%;
+          height: 2rem;
+          border-radius: 5px;
+          margin: 1rem; }
+        .cart-sugerence .sugerence-data ul li .deleteCart {
+          background-color: red;
+          border: none; }
+        .cart-sugerence .sugerence-data ul li .addCart {
+          background-color: white;
+          color: black;
+          border: solid;
+          border-radius: 5px; }
+        .cart-sugerence .sugerence-data ul li .inCart {
+          background-color: green;
+          color: white;
+          border: none;
+          border-radius: 5px; }
 
 .home {
   display: flex;
@@ -394,6 +483,44 @@ h3:hover {
   display: flex;
   justify-content: flex-end;
   font-size: 1rem; }
+
+@media (max-width: 1400px) {
+  .title h1 {
+    display: none; }
+  .slogan {
+    display: none; }
+  .title i {
+    font-size: 20rem;
+    display: flex;
+    width: 100%;
+    justify-content: center; }
+  .formHome form {
+    width: 60%; } }
+
+@media (max-width: 530px) {
+  .title h1 {
+    display: none; }
+  .slogan {
+    display: none; }
+  .title i {
+    font-size: 20rem;
+    display: flex;
+    width: 100%;
+    justify-content: center; }
+  .homeButtons {
+    display: flex;
+    flex-direction: column;
+    width: 100%; }
+    .homeButtons h3 {
+      margin-left: 0;
+      text-align: center;
+      margin: 1rem; }
+  .formHome form {
+    width: 100%; } }
+
+@media (max-width: 1100px) {
+  .formHome form {
+    width: 80%; } }
 
 .products {
   width: 100%;
